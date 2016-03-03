@@ -1,0 +1,3 @@
+[submodule "Carthage/Checkouts/OAuthKit"]
+	path = Bitbucket/Carthage/Checkouts/OAuthKit
+	url = https://github.com/RCacheaux/OAuthKit.git
