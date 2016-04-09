@@ -1,1 +1,2 @@
-github "RCacheaux/OAuthKit" "0.0.1"
+github "RCacheaux/OAuthKit" "0.0.1.2"
+github "RCacheaux/BitbucketKit" "0.0.1"

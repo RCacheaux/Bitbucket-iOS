@@ -12,7 +12,7 @@ class AccountViewController: UITableViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    self.refreshControl?.addTarget(self, action: "reloadData", forControlEvents: UIControlEvents.ValueChanged)
+    self.refreshControl?.addTarget(self, action: #selector(AccountViewController.reloadData), forControlEvents: UIControlEvents.ValueChanged)
   }
 
   override func viewWillAppear(animated: Bool) {

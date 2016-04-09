@@ -11,7 +11,7 @@ class RepoListViewController: UITableViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    refreshControl?.addTarget(self, action: "reloadData", forControlEvents: UIControlEvents.ValueChanged)
+    refreshControl?.addTarget(self, action: #selector(RepoListViewController.reloadData), forControlEvents: UIControlEvents.ValueChanged)
   }
 
   override func didReceiveMemoryWarning() {
