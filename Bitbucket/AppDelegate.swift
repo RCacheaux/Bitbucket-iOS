@@ -7,6 +7,12 @@
 //
 
 import UIKit
+import ReSwift
+
+let store = Store(reducer: AppReducer(), state: AppState(), middleware: [networkingMiddleware])
+
+
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

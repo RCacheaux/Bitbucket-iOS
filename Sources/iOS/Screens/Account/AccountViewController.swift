@@ -3,8 +3,9 @@
 import UIKit
 import BitbucketKit
 import OAuthKit
+import ReSwift
 
-class AccountViewController: UITableViewController {
+class AccountViewController: UITableViewController, StoreSubscriber {
   @IBOutlet weak var displayNameCell: UITableViewCell!
   @IBOutlet weak var usernameCell: UITableViewCell!
   var getUserAction: GetAuthenticatedUserAction?
@@ -17,10 +18,33 @@ class AccountViewController: UITableViewController {
 
   override func viewWillAppear(animated: Bool) {
     super.viewWillAppear(animated)
-    reloadData()
+//    reloadData()
+    store.subscribe(self)
+  }
+
+  override func viewWillDisappear(animated: Bool) {
+    super.viewWillDisappear(animated)
+    store.unsubscribe(self)
+  }
+
+  func newState(state: AppState) {
+    dispatch_async(dispatch_get_main_queue()) {
+      if let user = state.authenticatedUser {
+        self.render(user)
+      }
+      if state.loadingUser {
+        self.refreshControl?.beginRefreshing()
+      } else {
+        self.refreshControl?.endRefreshing()
+      }
+    }
   }
 
   func reloadData() {
+    store.dispatch(RefreshAccountAction())
+    return
+
+    /*
     self.refreshControl?.beginRefreshing()
     let getUserAction = GetAuthenticatedUserAction(accountStore: accountStore)
     getUserAction.completionBlock = {
@@ -36,6 +60,7 @@ class AccountViewController: UITableViewController {
     }
     getUserAction.start()
     self.getUserAction = getUserAction
+    */
   }
 
   override func didReceiveMemoryWarning() {

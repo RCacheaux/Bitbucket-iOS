@@ -3,22 +3,57 @@
 import UIKit
 import BitbucketKit
 import OAuthKit
+import ReSwift
 
-class RepoListViewController: UITableViewController {
+class RepoListViewController: UITableViewController, StoreSubscriber {
+  var currentGetReposActionID: String?
   var accountStore: AccountStore!
   var getReposAction: GetUserReposAction?
   var repos: [Repo] = []
 
   override func viewDidLoad() {
     super.viewDidLoad()
+    self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Cancel", style: .Plain, target: self, action: "cancel")
     refreshControl?.addTarget(self, action: "reloadData", forControlEvents: UIControlEvents.ValueChanged)
+  }
+
+  func cancel() {
+    if let actionID = currentGetReposActionID {
+      store.dispatch(CancelRefreshReposAction(actionID: actionID))
+    }
   }
 
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
   }
 
+  override func viewWillAppear(animated: Bool) {
+    super.viewWillAppear(animated)
+    store.subscribe(self)
+  }
+
+  override func viewWillDisappear(animated: Bool) {
+    super.viewWillDisappear(animated)
+    store.unsubscribe(self)
+  }
+
+  func newState(state: AppState) {
+    dispatch_async(dispatch_get_main_queue()) {
+      self.repos = state.authenticatedUserRepos
+      self.tableView.reloadData()
+
+      if state.loadingRepos {
+        self.refreshControl?.beginRefreshing()
+      } else {
+        self.refreshControl?.endRefreshing()
+      }
+    }
+  }
+
   func reloadData() {
+    currentGetReposActionID = "\(NSDate().timeIntervalSince1970)"
+    store.dispatch(RefreshReposAction(actionID: currentGetReposActionID!))
+    /*
     refreshControl?.beginRefreshing()
     accountStore.getAuthenticatedAccount { account in
       guard let account = account else {
@@ -42,7 +77,7 @@ class RepoListViewController: UITableViewController {
       }
       getReposAction.start()
       self.getReposAction = getReposAction
-    }
+    }*/
   }
 
   func endRefreshingOnMain() {

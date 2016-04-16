@@ -4,9 +4,10 @@ import UIKit
 import OAuthKit
 import BitbucketKit
 
+let accountStore = AccountStore()
+
 class ViewController: UIViewController {
   var loginAction: LoginAction?
-  let accountStore = AccountStore()
   var getReposAction: GetUserReposAction?
   var getUserAction: GetAuthenticatedUserAction?
   var appTabBarController: UITabBarController!
@@ -22,13 +23,20 @@ class ViewController: UIViewController {
     guard let _ = loginAction else {
       loginAction = LoginAction(presentingViewController: self, accountStore: accountStore)
       loginAction?.completionBlock = {
+
+
+
+
         if let credential = self.loginAction?.credential {
           print("Aww yea, got credential! \n\(credential)")
         }
         if let account = self.loginAction?.account {
+          let user = User(username: account.username, displayName: account.displayName, avatarURL: account.avatarURL)
+          store.dispatch(AuthenticatedAction(user: user, account: account))
+
           print("Aww yea, got account! \n\(account)")
         }
-        self.accountStore.getAuthenticatedAccount() { account in
+        accountStore.getAuthenticatedAccount() { account in
           if let account = account {
             print("Aww yea, got account from account store!\n\(account)")
           }
@@ -48,7 +56,7 @@ class ViewController: UIViewController {
     getUserAction.completionBlock = {
       switch getUserAction.outcome {
       case .Success(let user):
-        let getReposAction = GetUserReposAction(user: user, accountStore: self.accountStore)
+        let getReposAction = GetUserReposAction(user: user, accountStore: accountStore)
         getReposAction.completionBlock = {
           switch getReposAction.outcome {
           case .Success(let repos):
@@ -114,12 +122,12 @@ class ViewController: UIViewController {
       if let accountNavController = self.appTabBarController.viewControllers?[1] as? UINavigationController {
         if let accountViewController = accountNavController.viewControllers[0] as? AccountViewController {
           self.accountViewController = accountViewController
-          self.accountViewController.accountStore = self.accountStore
+          self.accountViewController.accountStore = accountStore
         }
       }
       if let repoListNavController = self.appTabBarController.viewControllers?[0] as? UINavigationController {
         if let repoListViewController = repoListNavController.viewControllers[0] as? RepoListViewController {
-          repoListViewController.accountStore = self.accountStore
+          repoListViewController.accountStore = accountStore
         }
       }
     }

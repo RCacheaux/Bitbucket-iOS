@@ -1,3 +1,6 @@
 [submodule "Carthage/Checkouts/OAuthKit"]
 	path = Bitbucket/Carthage/Checkouts/OAuthKit
 	url = https://github.com/RCacheaux/OAuthKit.git
+[submodule "Carthage/Checkouts/ReSwift"]
+	path = Carthage/Checkouts/ReSwift
+	url = https://github.com/ReSwift/ReSwift.git

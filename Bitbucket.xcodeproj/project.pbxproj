@@ -20,6 +20,12 @@
 		9F27AC531C8890C30052CC16 /* BitbucketKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9F27AC4A1C8890A90052CC16 /* BitbucketKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9F27AC5F1C8894CB0052CC16 /* RepoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F27AC5E1C8894CB0052CC16 /* RepoListViewController.swift */; };
 		9F27AC611C8896060052CC16 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F27AC601C8896060052CC16 /* AccountViewController.swift */; };
+		9F27AC861C88AE960052CC16 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F27AC851C88AE960052CC16 /* AppState.swift */; };
+		9F27AC881C88CFFD0052CC16 /* Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F27AC871C88CFFD0052CC16 /* Actions.swift */; };
+		9F27AC8A1C88D06B0052CC16 /* Reducers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F27AC891C88D06B0052CC16 /* Reducers.swift */; };
+		9F27AC8C1C88D2B90052CC16 /* Middleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F27AC8B1C88D2B90052CC16 /* Middleware.swift */; };
+		9F62088E1C88D88C00204B0D /* ReSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F27AC771C88AE070052CC16 /* ReSwift.framework */; };
+		9F62088F1C88D88C00204B0D /* ReSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9F27AC771C88AE070052CC16 /* ReSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +85,62 @@
 			remoteGlobalIDString = 9F27AB861C887A980052CC16;
 			remoteInfo = BitbucketKit;
 		};
+		9F27AC761C88AE070052CC16 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9F27AC6A1C88AE060052CC16 /* ReSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 625E66831C1FF97E0027C288;
+			remoteInfo = "ReSwift-iOS";
+		};
+		9F27AC781C88AE070052CC16 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9F27AC6A1C88AE060052CC16 /* ReSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 625E669A1C1FFA3C0027C288;
+			remoteInfo = "ReSwift-iOSTests";
+		};
+		9F27AC7A1C88AE070052CC16 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9F27AC6A1C88AE060052CC16 /* ReSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 25DBCF7B1C30C4AA00D63A58;
+			remoteInfo = "ReSwift-OSX";
+		};
+		9F27AC7C1C88AE070052CC16 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9F27AC6A1C88AE060052CC16 /* ReSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 25DBCF871C30C4DB00D63A58;
+			remoteInfo = "ReSwift-OSXTests";
+		};
+		9F27AC7E1C88AE070052CC16 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9F27AC6A1C88AE060052CC16 /* ReSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 25DBCF4E1C30C18D00D63A58;
+			remoteInfo = "ReSwift-tvOS";
+		};
+		9F27AC801C88AE070052CC16 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9F27AC6A1C88AE060052CC16 /* ReSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 25DBCF641C30C1AC00D63A58;
+			remoteInfo = "ReSwift-tvOSTests";
+		};
+		9F27AC821C88AE070052CC16 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9F27AC6A1C88AE060052CC16 /* ReSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 25DBCF371C30BF2B00D63A58;
+			remoteInfo = "ReSwift-watchOS";
+		};
+		9F6208901C88D88D00204B0D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9F27AC6A1C88AE060052CC16 /* ReSwift.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 625E66821C1FF97E0027C288;
+			remoteInfo = "ReSwift-iOS";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -88,6 +150,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				9F62088F1C88D88C00204B0D /* ReSwift.framework in Embed Frameworks */,
 				9F27AC4E1C8890BD0052CC16 /* OAuthKit.framework in Embed Frameworks */,
 				9F27AC531C8890C30052CC16 /* BitbucketKit.framework in Embed Frameworks */,
 			);
@@ -114,6 +177,11 @@
 		9F27AC431C8890A90052CC16 /* BitbucketKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = BitbucketKit.xcodeproj; path = Carthage/Checkouts/OAuthKit/BitbucketKit/BitbucketKit.xcodeproj; sourceTree = "<group>"; };
 		9F27AC5E1C8894CB0052CC16 /* RepoListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoListViewController.swift; sourceTree = "<group>"; };
 		9F27AC601C8896060052CC16 /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		9F27AC6A1C88AE060052CC16 /* ReSwift.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReSwift.xcodeproj; path = Carthage/Checkouts/ReSwift/ReSwift.xcodeproj; sourceTree = "<group>"; };
+		9F27AC851C88AE960052CC16 /* AppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		9F27AC871C88CFFD0052CC16 /* Actions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Actions.swift; sourceTree = "<group>"; };
+		9F27AC891C88D06B0052CC16 /* Reducers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reducers.swift; sourceTree = "<group>"; };
+		9F27AC8B1C88D2B90052CC16 /* Middleware.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Middleware.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +189,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F62088E1C88D88C00204B0D /* ReSwift.framework in Frameworks */,
 				9F27AC4D1C8890BD0052CC16 /* OAuthKit.framework in Frameworks */,
 				9F27AC521C8890C30052CC16 /* BitbucketKit.framework in Frameworks */,
 			);
@@ -146,6 +215,7 @@
 		9F27ABF81C888FA90052CC16 = {
 			isa = PBXGroup;
 			children = (
+				9F27AC6A1C88AE060052CC16 /* ReSwift.xcodeproj */,
 				9F27AC3A1C8890A20052CC16 /* OAuthKit.xcodeproj */,
 				9F27AC431C8890A90052CC16 /* BitbucketKit.xcodeproj */,
 				9F27AC591C8894850052CC16 /* Sources */,
@@ -226,6 +296,7 @@
 		9F27AC5A1C8894850052CC16 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
+				9F27AC841C88AE740052CC16 /* Redux */,
 				9F27AC5B1C8894850052CC16 /* Screens */,
 			);
 			path = iOS;
@@ -256,6 +327,31 @@
 			path = RepoList;
 			sourceTree = "<group>";
 		};
+		9F27AC6B1C88AE060052CC16 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9F27AC771C88AE070052CC16 /* ReSwift.framework */,
+				9F27AC791C88AE070052CC16 /* ReSwift-iOSTests.xctest */,
+				9F27AC7B1C88AE070052CC16 /* ReSwift.framework */,
+				9F27AC7D1C88AE070052CC16 /* ReSwift-OSXTests.xctest */,
+				9F27AC7F1C88AE070052CC16 /* ReSwift.framework */,
+				9F27AC811C88AE070052CC16 /* ReSwift-tvOSTests.xctest */,
+				9F27AC831C88AE070052CC16 /* ReSwift.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9F27AC841C88AE740052CC16 /* Redux */ = {
+			isa = PBXGroup;
+			children = (
+				9F27AC851C88AE960052CC16 /* AppState.swift */,
+				9F27AC871C88CFFD0052CC16 /* Actions.swift */,
+				9F27AC891C88D06B0052CC16 /* Reducers.swift */,
+				9F27AC8B1C88D2B90052CC16 /* Middleware.swift */,
+			);
+			path = Redux;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -273,6 +369,7 @@
 			dependencies = (
 				9F27AC501C8890BD0052CC16 /* PBXTargetDependency */,
 				9F27AC551C8890C30052CC16 /* PBXTargetDependency */,
+				9F6208911C88D88D00204B0D /* PBXTargetDependency */,
 			);
 			name = Bitbucket;
 			productName = Bitbucket;
@@ -358,6 +455,10 @@
 					ProductGroup = 9F27AC3B1C8890A20052CC16 /* Products */;
 					ProjectRef = 9F27AC3A1C8890A20052CC16 /* OAuthKit.xcodeproj */;
 				},
+				{
+					ProductGroup = 9F27AC6B1C88AE060052CC16 /* Products */;
+					ProjectRef = 9F27AC6A1C88AE060052CC16 /* ReSwift.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -397,6 +498,55 @@
 			remoteRef = 9F27AC4B1C8890A90052CC16 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		9F27AC771C88AE070052CC16 /* ReSwift.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ReSwift.framework;
+			remoteRef = 9F27AC761C88AE070052CC16 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9F27AC791C88AE070052CC16 /* ReSwift-iOSTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "ReSwift-iOSTests.xctest";
+			remoteRef = 9F27AC781C88AE070052CC16 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9F27AC7B1C88AE070052CC16 /* ReSwift.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ReSwift.framework;
+			remoteRef = 9F27AC7A1C88AE070052CC16 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9F27AC7D1C88AE070052CC16 /* ReSwift-OSXTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "ReSwift-OSXTests.xctest";
+			remoteRef = 9F27AC7C1C88AE070052CC16 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9F27AC7F1C88AE070052CC16 /* ReSwift.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ReSwift.framework;
+			remoteRef = 9F27AC7E1C88AE070052CC16 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9F27AC811C88AE070052CC16 /* ReSwift-tvOSTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "ReSwift-tvOSTests.xctest";
+			remoteRef = 9F27AC801C88AE070052CC16 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9F27AC831C88AE070052CC16 /* ReSwift.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ReSwift.framework;
+			remoteRef = 9F27AC821C88AE070052CC16 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -432,9 +582,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F27AC071C888FA90052CC16 /* ViewController.swift in Sources */,
+				9F27AC8C1C88D2B90052CC16 /* Middleware.swift in Sources */,
+				9F27AC861C88AE960052CC16 /* AppState.swift in Sources */,
 				9F27AC5F1C8894CB0052CC16 /* RepoListViewController.swift in Sources */,
+				9F27AC881C88CFFD0052CC16 /* Actions.swift in Sources */,
 				9F27AC611C8896060052CC16 /* AccountViewController.swift in Sources */,
 				9F27AC051C888FA90052CC16 /* AppDelegate.swift in Sources */,
+				9F27AC8A1C88D06B0052CC16 /* Reducers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -476,6 +630,11 @@
 			isa = PBXTargetDependency;
 			name = BitbucketKit;
 			targetProxy = 9F27AC541C8890C30052CC16 /* PBXContainerItemProxy */;
+		};
+		9F6208911C88D88D00204B0D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "ReSwift-iOS";
+			targetProxy = 9F6208901C88D88D00204B0D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -679,6 +838,7 @@
 				9F27AC2B1C888FA90052CC16 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9F27AC2C1C888FA90052CC16 /* Build configuration list for PBXNativeTarget "BitbucketTests" */ = {
 			isa = XCConfigurationList;
@@ -687,6 +847,7 @@
 				9F27AC2E1C888FA90052CC16 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9F27AC2F1C888FA90052CC16 /* Build configuration list for PBXNativeTarget "BitbucketUITests" */ = {
 			isa = XCConfigurationList;
@@ -695,6 +856,7 @@
 				9F27AC311C888FA90052CC16 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
