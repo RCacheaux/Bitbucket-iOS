@@ -6,7 +6,7 @@ import OAuthKit
 
 class RepoListViewController: UITableViewController {
   var accountStore: AccountStore!
-  var getReposAction: GetUserReposAction?
+  var getReposAction: RefreshUserReposOperation?
   var repos: [Repo] = []
 
   override func viewDidLoad() {
@@ -27,10 +27,10 @@ class RepoListViewController: UITableViewController {
         return
       }
       let user = User(username: account.username, displayName: account.displayName, avatarURL: account.avatarURL)
-      let getReposAction = GetUserReposAction(user: user, accountStore: self.accountStore)
+      let getReposAction = makeRefreshUserReposOperation(user.username)
       getReposAction.completionBlock = {
         switch getReposAction.outcome {
-        case .Success(let repos):
+        case .success(let repos):
           dispatch_async(dispatch_get_main_queue()) {
             self.repos = repos
             self.tableView.reloadData()

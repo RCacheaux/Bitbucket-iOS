@@ -7,7 +7,7 @@ import OAuthKit
 class AccountViewController: UITableViewController {
   @IBOutlet weak var displayNameCell: UITableViewCell!
   @IBOutlet weak var usernameCell: UITableViewCell!
-  var getUserAction: GetAuthenticatedUserAction?
+  var getUserAction: RefreshAuthenticatedUserOperation?
   var accountStore: AccountStore!
 
   override func viewDidLoad() {
@@ -22,10 +22,10 @@ class AccountViewController: UITableViewController {
 
   func reloadData() {
     self.refreshControl?.beginRefreshing()
-    let getUserAction = GetAuthenticatedUserAction(accountStore: accountStore)
+    let getUserAction = makeRefreshAuthenticatedUserOperation()
     getUserAction.completionBlock = {
       switch getUserAction.outcome {
-      case .Success(let user):
+      case .success(let user):
         dispatch_async(dispatch_get_main_queue()) {
           self.render(user)
           self.refreshControl?.endRefreshing()

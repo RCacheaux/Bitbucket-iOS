@@ -1,1 +1,3 @@
 github "RCacheaux/OAuthKit"
+github "Hearst-DD/ObjectMapper"
+github "Swinject/Swinject"

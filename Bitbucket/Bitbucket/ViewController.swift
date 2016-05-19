@@ -6,9 +6,9 @@ import BitbucketKit
 
 class ViewController: UIViewController {
   var loginAction: LoginAction?
-  let accountStore = AccountStore()
-  var getReposAction: GetUserReposAction?
-  var getUserAction: GetAuthenticatedUserAction?
+  let accountStore = getAccountStore()
+  var getReposAction: RefreshUserReposOperation?
+  var getUserAction: RefreshAuthenticatedUserOperation?
   var appTabBarController: UITabBarController!
   var accountViewController: AccountViewController!
 
@@ -44,14 +44,14 @@ class ViewController: UIViewController {
   }
 
   func getRepositories() {
-    let getUserAction = GetAuthenticatedUserAction(accountStore: accountStore)
+    let getUserAction = makeRefreshAuthenticatedUserOperation()
     getUserAction.completionBlock = {
       switch getUserAction.outcome {
-      case .Success(let user):
-        let getReposAction = GetUserReposAction(user: user, accountStore: self.accountStore)
+      case .success(let user):
+        let getReposAction = makeRefreshUserReposOperation(user.username)
         getReposAction.completionBlock = {
           switch getReposAction.outcome {
-          case .Success(let repos):
+          case .success(let repos):
             print("Awww yea, got repos:\n\(repos)")
           default:
             return
