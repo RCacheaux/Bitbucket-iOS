@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Playground.playground">
+   </FileRef>
+   <FileRef
       location = "group:Bitbucket-iOS/Bitbucket.xcodeproj">
    </FileRef>
    <FileRef
@@ -9,5 +12,17 @@
    </FileRef>
    <FileRef
       location = "group:OAuthKit/OAuthKit.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:UseCaseKit/UseCaseKit.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:ReSwiftRx/ReSwiftRx.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Carthage/Checkouts/ReSwift/ReSwift.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Carthage/Checkouts/RxSwift/Rx.xcodeproj">
    </FileRef>
 </Workspace>

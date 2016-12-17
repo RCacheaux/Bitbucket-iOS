@@ -10,6 +10,7 @@
 		9FFA80AF1E05A24300D77412 /* BitbucketKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FFA80A51E05A24300D77412 /* BitbucketKit.framework */; };
 		9FFA80B41E05A24300D77412 /* BitbucketKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFA80B31E05A24300D77412 /* BitbucketKitTests.swift */; };
 		9FFA80B61E05A24300D77412 /* BitbucketKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FFA80A81E05A24300D77412 /* BitbucketKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9FFA80EE1E05A36100D77412 /* RefreshTeamsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFA80ED1E05A36100D77412 /* RefreshTeamsUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		9FFA80AE1E05A24300D77412 /* BitbucketKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BitbucketKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FFA80B31E05A24300D77412 /* BitbucketKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitbucketKitTests.swift; sourceTree = "<group>"; };
 		9FFA80B51E05A24300D77412 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9FFA80ED1E05A36100D77412 /* RefreshTeamsUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefreshTeamsUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 			children = (
 				9FFA80A81E05A24300D77412 /* BitbucketKit.h */,
 				9FFA80A91E05A24300D77412 /* Info.plist */,
+				9FFA80EA1E05A34300D77412 /* Teams */,
 			);
 			path = BitbucketKit;
 			sourceTree = "<group>";
@@ -84,6 +87,30 @@
 				9FFA80B51E05A24300D77412 /* Info.plist */,
 			);
 			path = BitbucketKitTests;
+			sourceTree = "<group>";
+		};
+		9FFA80EA1E05A34300D77412 /* Teams */ = {
+			isa = PBXGroup;
+			children = (
+				9FFA80EB1E05A34300D77412 /* Observables */,
+				9FFA80EC1E05A34300D77412 /* UseCases */,
+			);
+			path = Teams;
+			sourceTree = "<group>";
+		};
+		9FFA80EB1E05A34300D77412 /* Observables */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Observables;
+			sourceTree = "<group>";
+		};
+		9FFA80EC1E05A34300D77412 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				9FFA80ED1E05A36100D77412 /* RefreshTeamsUseCase.swift */,
+			);
+			path = UseCases;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,6 +176,7 @@
 					9FFA80A41E05A24300D77412 = {
 						CreatedOnToolsVersion = 8.2;
 						DevelopmentTeam = CX9J48U7L2;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					9FFA80AD1E05A24300D77412 = {
@@ -198,6 +226,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FFA80EE1E05A36100D77412 /* RefreshTeamsUseCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,6 +351,7 @@
 		9FFA80BA1E05A24300D77412 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = CX9J48U7L2;
@@ -334,6 +364,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.atlassian.BitbucketKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -341,6 +372,7 @@
 		9FFA80BB1E05A24300D77412 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = CX9J48U7L2;
@@ -360,6 +392,7 @@
 		9FFA80BD1E05A24300D77412 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = CX9J48U7L2;
 				INFOPLIST_FILE = BitbucketKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -372,6 +405,7 @@
 		9FFA80BE1E05A24300D77412 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = CX9J48U7L2;
 				INFOPLIST_FILE = BitbucketKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -400,6 +434,7 @@
 				9FFA80BB1E05A24300D77412 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9FFA80BC1E05A24300D77412 /* Build configuration list for PBXNativeTarget "BitbucketKitTests" */ = {
 			isa = XCConfigurationList;
@@ -408,6 +443,7 @@
 				9FFA80BE1E05A24300D77412 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
