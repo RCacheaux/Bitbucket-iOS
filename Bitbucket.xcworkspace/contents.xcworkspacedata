@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:Bitbucket-iOS/Bitbucket.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:BitbucketKit/BitbucketKit.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:OAuthKit/OAuthKit.xcodeproj">
+   </FileRef>
+</Workspace>

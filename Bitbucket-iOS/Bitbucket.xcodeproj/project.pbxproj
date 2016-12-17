@@ -1,0 +1,566 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9FFA806E1E05A1A600D77412 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFA806D1E05A1A600D77412 /* AppDelegate.swift */; };
+		9FFA80701E05A1A600D77412 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFA806F1E05A1A600D77412 /* ViewController.swift */; };
+		9FFA80731E05A1A600D77412 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FFA80711E05A1A600D77412 /* Main.storyboard */; };
+		9FFA80751E05A1A600D77412 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FFA80741E05A1A600D77412 /* Assets.xcassets */; };
+		9FFA80781E05A1A600D77412 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FFA80761E05A1A600D77412 /* LaunchScreen.storyboard */; };
+		9FFA80831E05A1A600D77412 /* BitbucketTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFA80821E05A1A600D77412 /* BitbucketTests.swift */; };
+		9FFA808E1E05A1A600D77412 /* BitbucketUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFA808D1E05A1A600D77412 /* BitbucketUITests.swift */; };
+		9FFA80E41E05A2BC00D77412 /* BitbucketKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FFA80E31E05A2BC00D77412 /* BitbucketKit.framework */; };
+		9FFA80E51E05A2BC00D77412 /* BitbucketKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9FFA80E31E05A2BC00D77412 /* BitbucketKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9FFA80E71E05A2BC00D77412 /* OAuthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FFA80E61E05A2BC00D77412 /* OAuthKit.framework */; };
+		9FFA80E81E05A2BC00D77412 /* OAuthKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9FFA80E61E05A2BC00D77412 /* OAuthKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9FFA807F1E05A1A600D77412 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9FFA80621E05A1A600D77412 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9FFA80691E05A1A600D77412;
+			remoteInfo = Bitbucket;
+		};
+		9FFA808A1E05A1A600D77412 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9FFA80621E05A1A600D77412 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9FFA80691E05A1A600D77412;
+			remoteInfo = Bitbucket;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9FFA80E91E05A2BC00D77412 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				9FFA80E51E05A2BC00D77412 /* BitbucketKit.framework in Embed Frameworks */,
+				9FFA80E81E05A2BC00D77412 /* OAuthKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		9FFA806A1E05A1A600D77412 /* Bitbucket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bitbucket.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9FFA806D1E05A1A600D77412 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9FFA806F1E05A1A600D77412 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9FFA80721E05A1A600D77412 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9FFA80741E05A1A600D77412 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9FFA80771E05A1A600D77412 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9FFA80791E05A1A600D77412 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9FFA807E1E05A1A600D77412 /* BitbucketTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BitbucketTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9FFA80821E05A1A600D77412 /* BitbucketTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitbucketTests.swift; sourceTree = "<group>"; };
+		9FFA80841E05A1A600D77412 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9FFA80891E05A1A600D77412 /* BitbucketUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BitbucketUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9FFA808D1E05A1A600D77412 /* BitbucketUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitbucketUITests.swift; sourceTree = "<group>"; };
+		9FFA808F1E05A1A600D77412 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9FFA80E31E05A2BC00D77412 /* BitbucketKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = BitbucketKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9FFA80E61E05A2BC00D77412 /* OAuthKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = OAuthKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9FFA80671E05A1A600D77412 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FFA80E41E05A2BC00D77412 /* BitbucketKit.framework in Frameworks */,
+				9FFA80E71E05A2BC00D77412 /* OAuthKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9FFA807B1E05A1A600D77412 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9FFA80861E05A1A600D77412 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9FFA80611E05A1A600D77412 = {
+			isa = PBXGroup;
+			children = (
+				9FFA80E61E05A2BC00D77412 /* OAuthKit.framework */,
+				9FFA80E31E05A2BC00D77412 /* BitbucketKit.framework */,
+				9FFA806C1E05A1A600D77412 /* Bitbucket */,
+				9FFA80811E05A1A600D77412 /* BitbucketTests */,
+				9FFA808C1E05A1A600D77412 /* BitbucketUITests */,
+				9FFA806B1E05A1A600D77412 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9FFA806B1E05A1A600D77412 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9FFA806A1E05A1A600D77412 /* Bitbucket.app */,
+				9FFA807E1E05A1A600D77412 /* BitbucketTests.xctest */,
+				9FFA80891E05A1A600D77412 /* BitbucketUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9FFA806C1E05A1A600D77412 /* Bitbucket */ = {
+			isa = PBXGroup;
+			children = (
+				9FFA806D1E05A1A600D77412 /* AppDelegate.swift */,
+				9FFA806F1E05A1A600D77412 /* ViewController.swift */,
+				9FFA80711E05A1A600D77412 /* Main.storyboard */,
+				9FFA80741E05A1A600D77412 /* Assets.xcassets */,
+				9FFA80761E05A1A600D77412 /* LaunchScreen.storyboard */,
+				9FFA80791E05A1A600D77412 /* Info.plist */,
+			);
+			path = Bitbucket;
+			sourceTree = "<group>";
+		};
+		9FFA80811E05A1A600D77412 /* BitbucketTests */ = {
+			isa = PBXGroup;
+			children = (
+				9FFA80821E05A1A600D77412 /* BitbucketTests.swift */,
+				9FFA80841E05A1A600D77412 /* Info.plist */,
+			);
+			path = BitbucketTests;
+			sourceTree = "<group>";
+		};
+		9FFA808C1E05A1A600D77412 /* BitbucketUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9FFA808D1E05A1A600D77412 /* BitbucketUITests.swift */,
+				9FFA808F1E05A1A600D77412 /* Info.plist */,
+			);
+			path = BitbucketUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9FFA80691E05A1A600D77412 /* Bitbucket */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9FFA80921E05A1A600D77412 /* Build configuration list for PBXNativeTarget "Bitbucket" */;
+			buildPhases = (
+				9FFA80661E05A1A600D77412 /* Sources */,
+				9FFA80671E05A1A600D77412 /* Frameworks */,
+				9FFA80681E05A1A600D77412 /* Resources */,
+				9FFA80E91E05A2BC00D77412 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Bitbucket;
+			productName = Bitbucket;
+			productReference = 9FFA806A1E05A1A600D77412 /* Bitbucket.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9FFA807D1E05A1A600D77412 /* BitbucketTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9FFA80951E05A1A600D77412 /* Build configuration list for PBXNativeTarget "BitbucketTests" */;
+			buildPhases = (
+				9FFA807A1E05A1A600D77412 /* Sources */,
+				9FFA807B1E05A1A600D77412 /* Frameworks */,
+				9FFA807C1E05A1A600D77412 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9FFA80801E05A1A600D77412 /* PBXTargetDependency */,
+			);
+			name = BitbucketTests;
+			productName = BitbucketTests;
+			productReference = 9FFA807E1E05A1A600D77412 /* BitbucketTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9FFA80881E05A1A600D77412 /* BitbucketUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9FFA80981E05A1A600D77412 /* Build configuration list for PBXNativeTarget "BitbucketUITests" */;
+			buildPhases = (
+				9FFA80851E05A1A600D77412 /* Sources */,
+				9FFA80861E05A1A600D77412 /* Frameworks */,
+				9FFA80871E05A1A600D77412 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9FFA808B1E05A1A600D77412 /* PBXTargetDependency */,
+			);
+			name = BitbucketUITests;
+			productName = BitbucketUITests;
+			productReference = 9FFA80891E05A1A600D77412 /* BitbucketUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9FFA80621E05A1A600D77412 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = Atlassian;
+				TargetAttributes = {
+					9FFA80691E05A1A600D77412 = {
+						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = CX9J48U7L2;
+						ProvisioningStyle = Automatic;
+					};
+					9FFA807D1E05A1A600D77412 = {
+						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = CX9J48U7L2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 9FFA80691E05A1A600D77412;
+					};
+					9FFA80881E05A1A600D77412 = {
+						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = CX9J48U7L2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 9FFA80691E05A1A600D77412;
+					};
+				};
+			};
+			buildConfigurationList = 9FFA80651E05A1A600D77412 /* Build configuration list for PBXProject "Bitbucket" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9FFA80611E05A1A600D77412;
+			productRefGroup = 9FFA806B1E05A1A600D77412 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9FFA80691E05A1A600D77412 /* Bitbucket */,
+				9FFA807D1E05A1A600D77412 /* BitbucketTests */,
+				9FFA80881E05A1A600D77412 /* BitbucketUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9FFA80681E05A1A600D77412 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FFA80781E05A1A600D77412 /* LaunchScreen.storyboard in Resources */,
+				9FFA80751E05A1A600D77412 /* Assets.xcassets in Resources */,
+				9FFA80731E05A1A600D77412 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9FFA807C1E05A1A600D77412 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9FFA80871E05A1A600D77412 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9FFA80661E05A1A600D77412 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FFA80701E05A1A600D77412 /* ViewController.swift in Sources */,
+				9FFA806E1E05A1A600D77412 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9FFA807A1E05A1A600D77412 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FFA80831E05A1A600D77412 /* BitbucketTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9FFA80851E05A1A600D77412 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FFA808E1E05A1A600D77412 /* BitbucketUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9FFA80801E05A1A600D77412 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9FFA80691E05A1A600D77412 /* Bitbucket */;
+			targetProxy = 9FFA807F1E05A1A600D77412 /* PBXContainerItemProxy */;
+		};
+		9FFA808B1E05A1A600D77412 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9FFA80691E05A1A600D77412 /* Bitbucket */;
+			targetProxy = 9FFA808A1E05A1A600D77412 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9FFA80711E05A1A600D77412 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9FFA80721E05A1A600D77412 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9FFA80761E05A1A600D77412 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9FFA80771E05A1A600D77412 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9FFA80901E05A1A600D77412 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9FFA80911E05A1A600D77412 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9FFA80931E05A1A600D77412 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = CX9J48U7L2;
+				INFOPLIST_FILE = Bitbucket/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.atlassian.Bitbucket;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		9FFA80941E05A1A600D77412 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = CX9J48U7L2;
+				INFOPLIST_FILE = Bitbucket/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.atlassian.Bitbucket;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		9FFA80961E05A1A600D77412 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = CX9J48U7L2;
+				INFOPLIST_FILE = BitbucketTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.atlassian.BitbucketTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bitbucket.app/Bitbucket";
+			};
+			name = Debug;
+		};
+		9FFA80971E05A1A600D77412 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = CX9J48U7L2;
+				INFOPLIST_FILE = BitbucketTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.atlassian.BitbucketTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bitbucket.app/Bitbucket";
+			};
+			name = Release;
+		};
+		9FFA80991E05A1A600D77412 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = CX9J48U7L2;
+				INFOPLIST_FILE = BitbucketUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.atlassian.BitbucketUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Bitbucket;
+			};
+			name = Debug;
+		};
+		9FFA809A1E05A1A600D77412 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = CX9J48U7L2;
+				INFOPLIST_FILE = BitbucketUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.atlassian.BitbucketUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Bitbucket;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9FFA80651E05A1A600D77412 /* Build configuration list for PBXProject "Bitbucket" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9FFA80901E05A1A600D77412 /* Debug */,
+				9FFA80911E05A1A600D77412 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9FFA80921E05A1A600D77412 /* Build configuration list for PBXNativeTarget "Bitbucket" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9FFA80931E05A1A600D77412 /* Debug */,
+				9FFA80941E05A1A600D77412 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9FFA80951E05A1A600D77412 /* Build configuration list for PBXNativeTarget "BitbucketTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9FFA80961E05A1A600D77412 /* Debug */,
+				9FFA80971E05A1A600D77412 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9FFA80981E05A1A600D77412 /* Build configuration list for PBXNativeTarget "BitbucketUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9FFA80991E05A1A600D77412 /* Debug */,
+				9FFA809A1E05A1A600D77412 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9FFA80621E05A1A600D77412 /* Project object */;
+}
