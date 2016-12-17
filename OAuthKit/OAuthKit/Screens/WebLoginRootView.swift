@@ -28,7 +28,7 @@ class WebLoginRootView: UIView {
 }
 
 extension WebLoginRootView: WKNavigationDelegate {
-  func webView(webView: WKWebView, decidePolicyForNavigationAction navigationAction: WKNavigationAction, decisionHandler: (WKNavigationActionPolicy) -> Void) {
+  func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
 
     guard let requestURL = navigationAction.request.url else {
       decisionHandler(.allow)
@@ -52,31 +52,31 @@ extension WebLoginRootView: WKNavigationDelegate {
 
   }
 
-  func webView(webView: WKWebView, decidePolicyForNavigationResponse navigationResponse: WKNavigationResponse, decisionHandler: (WKNavigationResponsePolicy) -> Void) {
+  func webView(_ webView: WKWebView, decidePolicyFor navigationResponse: WKNavigationResponse, decisionHandler: @escaping (WKNavigationResponsePolicy) -> Void) {
     decisionHandler(.allow)
   }
 
-  func webView(webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
+  func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
 
   }
 
-  func webView(webView: WKWebView, didReceiveServerRedirectForProvisionalNavigation navigation: WKNavigation!) {
+  func webView(_ webView: WKWebView, didReceiveServerRedirectForProvisionalNavigation navigation: WKNavigation!) {
 
   }
 
-  func webView(webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: NSError) {
+  func webView(_ webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: Error) {
 
   }
 
-  func webView(webView: WKWebView, didCommitNavigation navigation: WKNavigation!) {
+  func webView(_ webView: WKWebView, didCommit navigation: WKNavigation!) {
     
   }
 
-  func webView(webView: WKWebView, didFinishNavigation navigation: WKNavigation!) {
+  func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
     
   }
 
-  func webView(webView: WKWebView, didFailNavigation navigation: WKNavigation!, withError error: NSError) {
+  func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
 
   }
 
@@ -85,7 +85,7 @@ extension WebLoginRootView: WKNavigationDelegate {
 //    
 //  }
 
-  func webViewWebContentProcessDidTerminate(webView: WKWebView) {
+  func webViewWebContentProcessDidTerminate(_ webView: WKWebView) {
 
   }
 }

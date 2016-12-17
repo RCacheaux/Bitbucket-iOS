@@ -1,48 +1,51 @@
+//
+//  LoginUseCase.swift
+//  OAuthKit
+//
+//  Created by Rene Cacheaux on 12/17/16.
 //  Copyright © 2016 Atlassian. All rights reserved.
+//
 
 import UIKit
+import ReSwift
+import UseCaseKit // Is there a way not to couple UseCaseKit to all things? Try mark conformance to UseCase in consuming app.
 
-public class LoginAction: Action {
-  let presentingViewController: UIViewController
-  public internal(set) var credential: Credential?
-  public internal(set) var account: Account?
-  let accountStore: AccountStore
 
-  public init(presentingViewController: UIViewController, accountStore: AccountStore) {
+public class LoginUseCase: UseCase {
+  private let presentingViewController: UIViewController
+  private let accountStore: Store<AccountState>
+
+  public init(presentingViewController: UIViewController, accountStore: Store<AccountState>) {
     self.presentingViewController = presentingViewController
     self.accountStore = accountStore
-    super.init()
   }
 
-  override func run() {
-    let webLoginFlow = WebLoginFlow(onComplete: {
-      self.credential = $0
-      self.getUser(onComplete: { account in
-        self.account = account
+  // TODO: Use promise chaining here instead of pyramid of doom.
+  public func start(_ onComplete: @escaping (UseCaseResult) -> Void) {
+    let webLoginFlow = WebLoginFlow() { credential in
+      self.getUser(withCredential: credential, onComplete: { account in
+        self.accountStore.dispatch(NewAccountAction(account: account))
         DispatchQueue.main.async {
           self.presentingViewController.dismiss(animated: true, completion: nil)
         }
-        self.finishedExecutingAction()
+        onComplete(.success)
       })
-    })
+    }
     DispatchQueue.main.async {
       self.presentingViewController.present(webLoginFlow, animated: true, completion: nil)
     }
   }
 
+  private func getUser(withCredential credential: Credential, onComplete: @escaping (Account) -> Void) {
 
-  func getUser(onComplete onComplete: @escaping (Account) -> Void) {
-
-
-    guard let url = NSURL(string: "https://api.bitbucket.org/2.0/user") else {
+    guard let url = URL(string: "https://api.bitbucket.org/2.0/user") else {
       return
     }
-    let request = NSMutableURLRequest(url: url as URL)
+    var request = URLRequest(url: url)
 
+    request.setValue("Bearer \(credential.accessToken)", forHTTPHeaderField: "Authorization")
 
-    request.setValue("Bearer \(self.credential!.accessToken)", forHTTPHeaderField: "Authorization")
-
-    URLSession.shared.dataTask(with: request as URLRequest) { data, response, error in
+    URLSession.shared.dataTask(with: request) { data, response, error in
       guard error == nil else {
         print("HTTP Error GETing authenitcated user.")
         return
@@ -52,7 +55,7 @@ public class LoginAction: Action {
         return
       }
 
-      if let response = String(data: data, encoding: String.Encoding.utf8) {
+      if let response = String(data: data, encoding: .utf8) {
         print("Response: \(response)")
       } else {
         print("Could not convert response data into UTF8 String from authenticated user GET.")
@@ -69,17 +72,15 @@ public class LoginAction: Action {
             let avatar = links["avatar"] as? [String: AnyObject],
             let avatarURLString = avatar["href"] as? String,
             let avatarURL = NSURL(string: avatarURLString) {
-              let account = Account(identifier: identifier, username: username, displayName: displayName, avatarURL: avatarURL, credential: self.credential!)
-              self.accountStore.saveAuthenticatedAccount(account: account) {
-                onComplete(account)
-              }
+            let account = Account(identifier: identifier, username: username, displayName: displayName, avatarURL: avatarURL, credential: credential)
+            onComplete(account)
           }
         }
       } catch {
         // TODO: Handle this situation.
       }
-    }.resume()
-
+      }.resume()
   }
-
 }
+
+

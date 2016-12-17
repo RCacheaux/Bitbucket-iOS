@@ -10,14 +10,15 @@
 		9FFA80D31E05A28D00D77412 /* OAuthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FFA80C91E05A28D00D77412 /* OAuthKit.framework */; };
 		9FFA80D81E05A28D00D77412 /* OAuthKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFA80D71E05A28D00D77412 /* OAuthKitTests.swift */; };
 		9FFA80DA1E05A28D00D77412 /* OAuthKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FFA80CC1E05A28D00D77412 /* OAuthKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9FFA80FB1E05A3E400D77412 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFA80F01E05A3E400D77412 /* Action.swift */; };
-		9FFA80FC1E05A3E400D77412 /* LoginAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFA80F11E05A3E400D77412 /* LoginAction.swift */; };
 		9FFA80FD1E05A3E400D77412 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFA80F31E05A3E400D77412 /* Account.swift */; };
 		9FFA80FE1E05A3E400D77412 /* Credential.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFA80F41E05A3E400D77412 /* Credential.swift */; };
 		9FFA80FF1E05A3E400D77412 /* WebLoginFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFA80F61E05A3E400D77412 /* WebLoginFlow.swift */; };
 		9FFA81001E05A3E400D77412 /* WebLoginRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFA80F71E05A3E400D77412 /* WebLoginRootView.swift */; };
 		9FFA81011E05A3E400D77412 /* WebLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFA80F81E05A3E400D77412 /* WebLoginViewController.swift */; };
 		9FFA81021E05A3E400D77412 /* AccountStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFA80FA1E05A3E400D77412 /* AccountStore.swift */; };
+		9FFA818A1E05BCCF00D77412 /* LoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFA81891E05BCCF00D77412 /* LoginUseCase.swift */; };
+		9FFA818C1E05F17E00D77412 /* Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFA818B1E05F17E00D77412 /* Actions.swift */; };
+		9FFA818E1E05F68E00D77412 /* AccountStateObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFA818D1E05F68E00D77412 /* AccountStateObservable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,14 +38,15 @@
 		9FFA80D21E05A28D00D77412 /* OAuthKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OAuthKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FFA80D71E05A28D00D77412 /* OAuthKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuthKitTests.swift; sourceTree = "<group>"; };
 		9FFA80D91E05A28D00D77412 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9FFA80F01E05A3E400D77412 /* Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
-		9FFA80F11E05A3E400D77412 /* LoginAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginAction.swift; sourceTree = "<group>"; };
 		9FFA80F31E05A3E400D77412 /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		9FFA80F41E05A3E400D77412 /* Credential.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Credential.swift; sourceTree = "<group>"; };
 		9FFA80F61E05A3E400D77412 /* WebLoginFlow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebLoginFlow.swift; sourceTree = "<group>"; };
 		9FFA80F71E05A3E400D77412 /* WebLoginRootView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebLoginRootView.swift; sourceTree = "<group>"; };
 		9FFA80F81E05A3E400D77412 /* WebLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebLoginViewController.swift; sourceTree = "<group>"; };
 		9FFA80FA1E05A3E400D77412 /* AccountStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountStore.swift; sourceTree = "<group>"; };
+		9FFA81891E05BCCF00D77412 /* LoginUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginUseCase.swift; sourceTree = "<group>"; };
+		9FFA818B1E05F17E00D77412 /* Actions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Actions.swift; sourceTree = "<group>"; };
+		9FFA818D1E05F68E00D77412 /* AccountStateObservable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountStateObservable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,8 +112,7 @@
 		9FFA80EF1E05A3E400D77412 /* Actions */ = {
 			isa = PBXGroup;
 			children = (
-				9FFA80F01E05A3E400D77412 /* Action.swift */,
-				9FFA80F11E05A3E400D77412 /* LoginAction.swift */,
+				9FFA818B1E05F17E00D77412 /* Actions.swift */,
 			);
 			path = Actions;
 			sourceTree = "<group>";
@@ -155,6 +156,7 @@
 		9FFA815A1E05ABF600D77412 /* Observables */ = {
 			isa = PBXGroup;
 			children = (
+				9FFA818D1E05F68E00D77412 /* AccountStateObservable.swift */,
 			);
 			path = Observables;
 			sourceTree = "<group>";
@@ -162,6 +164,7 @@
 		9FFA815B1E05ABF600D77412 /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
+				9FFA81891E05BCCF00D77412 /* LoginUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -278,14 +281,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9FFA80FB1E05A3E400D77412 /* Action.swift in Sources */,
 				9FFA81001E05A3E400D77412 /* WebLoginRootView.swift in Sources */,
-				9FFA80FC1E05A3E400D77412 /* LoginAction.swift in Sources */,
 				9FFA81011E05A3E400D77412 /* WebLoginViewController.swift in Sources */,
 				9FFA80FE1E05A3E400D77412 /* Credential.swift in Sources */,
+				9FFA818C1E05F17E00D77412 /* Actions.swift in Sources */,
 				9FFA80FF1E05A3E400D77412 /* WebLoginFlow.swift in Sources */,
 				9FFA80FD1E05A3E400D77412 /* Account.swift in Sources */,
+				9FFA818E1E05F68E00D77412 /* AccountStateObservable.swift in Sources */,
 				9FFA81021E05A3E400D77412 /* AccountStore.swift in Sources */,
+				9FFA818A1E05BCCF00D77412 /* LoginUseCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,14 +8,32 @@
 
 import UIKit
 
+import OAuthKit
+import RxSwift
+import UseCaseKit
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
   var window: UIWindow?
-
+  let queue = OperationQueue()
+  var observable: Observable<AccountState>?
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
     // Override point for customization after application launch.
+
+    observable = AccountStateObservable.make()
+    let _ = observable?.subscribe(onNext: { state in
+      if state.accounts.isEmpty {
+        return
+      }
+      print(state.accounts[0])
+    })
+
+
+    let loginUseCase = LoginUseCase(presentingViewController: window!.rootViewController!, accountStore: OAuthKit.store)
+    loginUseCase.schedule(on: queue)
+
     return true
   }
 

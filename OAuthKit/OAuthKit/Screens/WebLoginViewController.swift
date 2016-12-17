@@ -37,7 +37,7 @@ class WebLoginViewController: UIViewController {
       self?.getAccessTokenWithAuthCode(authCode: authCode)
     }
 
-    rootView.loadRequest(request: request)
+    let _ = rootView.loadRequest(request: request)
   }
 
   func getAccessTokenWithAuthCode(authCode: String) {
@@ -51,14 +51,11 @@ class WebLoginViewController: UIViewController {
 
     let basicAuthCredentials = "\(clientID):\(clientSecret)"
 
-    if let basicAuthCredentialsData = basicAuthCredentials.data(using: String.Encoding.utf8) {
-      let base64EncodedCredentials = Data(base64Encoded: basicAuthCredentialsData)
-      // TODO: remove IUO
-      if let basicAuthEncodedCredentials = String(data: base64EncodedCredentials!, encoding: String.Encoding.utf8) {
-        let basicAuthHeaderValue = "Basic \(basicAuthEncodedCredentials)"
-        request.setValue(basicAuthHeaderValue, forHTTPHeaderField: "Authorization")
-      }
 
+    if let basicAuthCredentialsData = basicAuthCredentials.data(using: .utf8) {
+      let basicAuthEncodedCredentials = basicAuthCredentialsData.base64EncodedString()
+      let basicAuthHeaderValue = "Basic \(basicAuthEncodedCredentials)"
+      request.setValue(basicAuthHeaderValue, forHTTPHeaderField: "Authorization")
     } else {
       print("Could not create Basic Auth HTTP header before POSTing for access token.")
       return
