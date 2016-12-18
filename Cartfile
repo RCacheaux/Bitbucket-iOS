@@ -1,2 +1,4 @@
 github "ReactiveX/RxSwift" ~> 3.0
 github "ReSwift/ReSwift"
+github "utahiosmac/Marshal"
+github "Thomvis/BrightFutures"

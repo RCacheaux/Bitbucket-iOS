@@ -28,7 +28,7 @@ private struct AccountReducer: Reducer {
 }
 
 public struct AccountStateObservable {
-  public static func make() -> Observable<AccountState> {
-    return store.makeObservable(nil)
+  public static func make<SelectedState>(_ selector: ((AccountState) -> SelectedState)? = nil) -> Observable<SelectedState> {
+    return store.makeObservable(selector)
   }
 }

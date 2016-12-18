@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9FACA7501E062C9E004C8D6B /* TeamListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FACA74F1E062C9E004C8D6B /* TeamListViewController.swift */; };
 		9FFA806E1E05A1A600D77412 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFA806D1E05A1A600D77412 /* AppDelegate.swift */; };
-		9FFA80701E05A1A600D77412 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFA806F1E05A1A600D77412 /* ViewController.swift */; };
 		9FFA80731E05A1A600D77412 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FFA80711E05A1A600D77412 /* Main.storyboard */; };
 		9FFA80751E05A1A600D77412 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FFA80741E05A1A600D77412 /* Assets.xcassets */; };
 		9FFA80781E05A1A600D77412 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FFA80761E05A1A600D77412 /* LaunchScreen.storyboard */; };
@@ -53,9 +53,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9FACA74F1E062C9E004C8D6B /* TeamListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamListViewController.swift; sourceTree = "<group>"; };
 		9FFA806A1E05A1A600D77412 /* Bitbucket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bitbucket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FFA806D1E05A1A600D77412 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9FFA806F1E05A1A600D77412 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9FFA80721E05A1A600D77412 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9FFA80741E05A1A600D77412 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9FFA80771E05A1A600D77412 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -97,15 +97,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9FFA80611E05A1A600D77412 = {
+		9FACA74E1E062B80004C8D6B /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
 				9FFA80E61E05A2BC00D77412 /* OAuthKit.framework */,
 				9FFA80E31E05A2BC00D77412 /* BitbucketKit.framework */,
+			);
+			name = Dependencies;
+			sourceTree = "<group>";
+		};
+		9FFA80611E05A1A600D77412 = {
+			isa = PBXGroup;
+			children = (
 				9FFA806C1E05A1A600D77412 /* Bitbucket */,
 				9FFA80811E05A1A600D77412 /* BitbucketTests */,
 				9FFA808C1E05A1A600D77412 /* BitbucketUITests */,
 				9FFA806B1E05A1A600D77412 /* Products */,
+				9FACA74E1E062B80004C8D6B /* Dependencies */,
 			);
 			sourceTree = "<group>";
 		};
@@ -122,12 +130,12 @@
 		9FFA806C1E05A1A600D77412 /* Bitbucket */ = {
 			isa = PBXGroup;
 			children = (
-				9FFA806D1E05A1A600D77412 /* AppDelegate.swift */,
-				9FFA806F1E05A1A600D77412 /* ViewController.swift */,
-				9FFA80711E05A1A600D77412 /* Main.storyboard */,
 				9FFA80741E05A1A600D77412 /* Assets.xcassets */,
+				9FFA80711E05A1A600D77412 /* Main.storyboard */,
 				9FFA80761E05A1A600D77412 /* LaunchScreen.storyboard */,
 				9FFA80791E05A1A600D77412 /* Info.plist */,
+				9FFA806D1E05A1A600D77412 /* AppDelegate.swift */,
+				9FACA74F1E062C9E004C8D6B /* TeamListViewController.swift */,
 			);
 			path = Bitbucket;
 			sourceTree = "<group>";
@@ -288,8 +296,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9FFA80701E05A1A600D77412 /* ViewController.swift in Sources */,
 				9FFA806E1E05A1A600D77412 /* AppDelegate.swift in Sources */,
+				9FACA7501E062C9E004C8D6B /* TeamListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

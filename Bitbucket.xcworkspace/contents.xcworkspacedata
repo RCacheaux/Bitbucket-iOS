@@ -25,4 +25,16 @@
    <FileRef
       location = "group:Carthage/Checkouts/RxSwift/Rx.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:Carthage/Checkouts/Marshal/Marshal.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Carthage/Checkouts/BrightFutures/BrightFutures.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Carthage/Checkouts/Result/Result.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Cartfile">
+   </FileRef>
 </Workspace>

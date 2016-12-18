@@ -1,2 +1,5 @@
+github "utahiosmac/Marshal" "1.2.3"
 github "ReSwift/ReSwift" "3.0.0"
+github "antitypical/Result" "3.1.0"
 github "ReactiveX/RxSwift" "3.0.1"
+github "Thomvis/BrightFutures" "v5.1.0"

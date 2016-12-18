@@ -10,7 +10,10 @@ import UIKit
 
 import OAuthKit
 import RxSwift
+import ReSwift
+import ReSwiftRx
 import UseCaseKit
+import BitbucketKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,8 +22,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   let queue = OperationQueue()
   var observable: Observable<AccountState>?
 
+  let store = Store<AppState>(reducer: AppReducer(), state: nil)
+
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
     // Override point for customization after application launch.
+
+
 
     observable = AccountStateObservable.make()
     let _ = observable?.subscribe(onNext: { state in
@@ -28,14 +35,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return
       }
       print(state.accounts[0])
+      let accountObservable = AccountStateObservable.make { state in
+        return state.accounts[0]
+      }
+      let teamsUseCase = RefreshTeamsUseCase(observable: accountObservable, store: self.store)
+      teamsUseCase.schedule(on: self.queue)
     })
 
 
     let loginUseCase = LoginUseCase(presentingViewController: window!.rootViewController!, accountStore: OAuthKit.store)
     loginUseCase.schedule(on: queue)
 
+
+    let teamVC = (window!.rootViewController as! UINavigationController).viewControllers[0] as! TeamListViewController
+    teamVC.observable = store.makeObservable { state in
+      return state.teams
+    }
+
+    
     return true
   }
+
 
   func applicationWillResignActive(_ application: UIApplication) {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

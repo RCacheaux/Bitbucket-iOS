@@ -28,6 +28,11 @@ extension Store {
   private func subscribe<SelectedState>(_ rxObserver: AnyObserver<SelectedState>,
                          selector: ((State) -> SelectedState)?) -> Cancelable {
     let subscriber = RxStoreSubscriber<SelectedState>(rxObserver)
+    if let currentState = state {
+      DispatchQueue.main.async {
+        subscriber.newState(state: currentState)
+      }
+    }
     subscribe(subscriber, selector: selector)
     return makeDisposable(subscriber)
   }
