@@ -3,5 +3,6 @@
     <pages>
         <page name='ReSwift'/>
         <page name='BitbucketUseCases'/>
+        <page name='Swinject'/>
     </pages>
 </playground>

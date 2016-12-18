@@ -14,6 +14,8 @@ import ReSwift
 import ReSwiftRx
 import UseCaseKit
 import BitbucketKit
+import Swinject
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -23,6 +25,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   var observable: Observable<AccountState>?
 
   let store = Store<AppState>(reducer: AppReducer(), state: nil)
+
+
+  let container: Container = {
+    let c = Container()
+    c.register(AnyReducer.self) { _ in AppReducer() }
+    c.register(Store<AppState>.self) { r in Store<AppState>(reducer: r.resolve(AnyReducer.self)!, state: nil) }
+      .inObjectScope(.container)
+
+    c.register(Store<AccountState>.self) { _ in Store<AccountState>(reducer: AccountReducer(), state: nil) }
+
+
+    c.register(Observable<AccountState>.self) { r in
+      let store = r.resolve(Store<AccountState>.self)!
+      return store.makeObservable(nil)
+    }
+
+
+
+    return c
+  }()
+
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
     // Override point for customization after application launch.

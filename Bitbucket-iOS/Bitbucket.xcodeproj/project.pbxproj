@@ -8,6 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		9FACA7501E062C9E004C8D6B /* TeamListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FACA74F1E062C9E004C8D6B /* TeamListViewController.swift */; };
+		9FACA7C01E06EA78004C8D6B /* UseCaseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FACA7BF1E06EA78004C8D6B /* UseCaseKit.framework */; };
+		9FACA7C11E06EA78004C8D6B /* UseCaseKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9FACA7BF1E06EA78004C8D6B /* UseCaseKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9FACA7C31E06EA78004C8D6B /* ReSwiftRx.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FACA7C21E06EA78004C8D6B /* ReSwiftRx.framework */; };
+		9FACA7C41E06EA78004C8D6B /* ReSwiftRx.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9FACA7C21E06EA78004C8D6B /* ReSwiftRx.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9FACA7C61E06EA78004C8D6B /* ReSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FACA7C51E06EA78004C8D6B /* ReSwift.framework */; };
+		9FACA7C71E06EA78004C8D6B /* ReSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9FACA7C51E06EA78004C8D6B /* ReSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9FACA7C91E06EA78004C8D6B /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FACA7C81E06EA78004C8D6B /* RxSwift.framework */; };
+		9FACA7CA1E06EA78004C8D6B /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9FACA7C81E06EA78004C8D6B /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9FACA7CC1E06EA78004C8D6B /* BrightFutures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FACA7CB1E06EA78004C8D6B /* BrightFutures.framework */; };
+		9FACA7CD1E06EA78004C8D6B /* BrightFutures.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9FACA7CB1E06EA78004C8D6B /* BrightFutures.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9FACA7CF1E06EA78004C8D6B /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FACA7CE1E06EA78004C8D6B /* Result.framework */; };
+		9FACA7D01E06EA78004C8D6B /* Result.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9FACA7CE1E06EA78004C8D6B /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9FFA806E1E05A1A600D77412 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFA806D1E05A1A600D77412 /* AppDelegate.swift */; };
 		9FFA80731E05A1A600D77412 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FFA80711E05A1A600D77412 /* Main.storyboard */; };
 		9FFA80751E05A1A600D77412 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FFA80741E05A1A600D77412 /* Assets.xcassets */; };
@@ -45,7 +57,13 @@
 			dstSubfolderSpec = 10;
 			files = (
 				9FFA80E51E05A2BC00D77412 /* BitbucketKit.framework in Embed Frameworks */,
+				9FACA7C41E06EA78004C8D6B /* ReSwiftRx.framework in Embed Frameworks */,
+				9FACA7CA1E06EA78004C8D6B /* RxSwift.framework in Embed Frameworks */,
+				9FACA7D01E06EA78004C8D6B /* Result.framework in Embed Frameworks */,
 				9FFA80E81E05A2BC00D77412 /* OAuthKit.framework in Embed Frameworks */,
+				9FACA7C71E06EA78004C8D6B /* ReSwift.framework in Embed Frameworks */,
+				9FACA7CD1E06EA78004C8D6B /* BrightFutures.framework in Embed Frameworks */,
+				9FACA7C11E06EA78004C8D6B /* UseCaseKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -54,6 +72,12 @@
 
 /* Begin PBXFileReference section */
 		9FACA74F1E062C9E004C8D6B /* TeamListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamListViewController.swift; sourceTree = "<group>"; };
+		9FACA7BF1E06EA78004C8D6B /* UseCaseKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UseCaseKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9FACA7C21E06EA78004C8D6B /* ReSwiftRx.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ReSwiftRx.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9FACA7C51E06EA78004C8D6B /* ReSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ReSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9FACA7C81E06EA78004C8D6B /* RxSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9FACA7CB1E06EA78004C8D6B /* BrightFutures.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = BrightFutures.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9FACA7CE1E06EA78004C8D6B /* Result.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Result.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FFA806A1E05A1A600D77412 /* Bitbucket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bitbucket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FFA806D1E05A1A600D77412 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9FFA80721E05A1A600D77412 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -76,7 +100,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				9FFA80E41E05A2BC00D77412 /* BitbucketKit.framework in Frameworks */,
+				9FACA7C31E06EA78004C8D6B /* ReSwiftRx.framework in Frameworks */,
+				9FACA7C91E06EA78004C8D6B /* RxSwift.framework in Frameworks */,
+				9FACA7CF1E06EA78004C8D6B /* Result.framework in Frameworks */,
 				9FFA80E71E05A2BC00D77412 /* OAuthKit.framework in Frameworks */,
+				9FACA7C61E06EA78004C8D6B /* ReSwift.framework in Frameworks */,
+				9FACA7CC1E06EA78004C8D6B /* BrightFutures.framework in Frameworks */,
+				9FACA7C01E06EA78004C8D6B /* UseCaseKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,6 +130,12 @@
 		9FACA74E1E062B80004C8D6B /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
+				9FACA7CE1E06EA78004C8D6B /* Result.framework */,
+				9FACA7CB1E06EA78004C8D6B /* BrightFutures.framework */,
+				9FACA7C81E06EA78004C8D6B /* RxSwift.framework */,
+				9FACA7C51E06EA78004C8D6B /* ReSwift.framework */,
+				9FACA7C21E06EA78004C8D6B /* ReSwiftRx.framework */,
+				9FACA7BF1E06EA78004C8D6B /* UseCaseKit.framework */,
 				9FFA80E61E05A2BC00D77412 /* OAuthKit.framework */,
 				9FFA80E31E05A2BC00D77412 /* BitbucketKit.framework */,
 			);

@@ -13,8 +13,11 @@ import ReSwift
 
 public let store = Store<AccountState>(reducer: AccountReducer(), state: nil)
 
-private struct AccountReducer: Reducer {
-  func handleAction(action: Action, state: AccountState?) -> AccountState {
+public struct AccountReducer: Reducer {
+
+  public init() {}
+
+  public func handleAction(action: Action, state: AccountState?) -> AccountState {
     var state = state ?? AccountState()
     switch action {
     case let action as NewAccountAction:
@@ -25,10 +28,14 @@ private struct AccountReducer: Reducer {
 
     return state
   }
+
 }
+
 
 public struct AccountStateObservable {
   public static func make<SelectedState>(_ selector: ((AccountState) -> SelectedState)? = nil) -> Observable<SelectedState> {
     return store.makeObservable(selector)
   }
 }
+
+
