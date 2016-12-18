@@ -51,6 +51,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     teamVC.observable = store.makeObservable { state in
       return state.teams
     }
+    teamVC.makeRefreshUseCase = {
+      let accountObservable = AccountStateObservable.make { state in
+        return state.accounts[0]
+      }
+      return RefreshTeamsUseCase(observable: accountObservable, store: self.store)
+    }
 
     
     return true

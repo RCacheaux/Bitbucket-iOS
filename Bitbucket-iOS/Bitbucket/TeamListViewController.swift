@@ -11,14 +11,23 @@ import RxSwift
 import BitbucketKit
 
 class TeamListViewController: UITableViewController {
+  var teams: [Team] = []
+
+  // In
   var observable: Observable<[Team]>!
   var observableDisposable: Disposable?
-  var teams: [Team] = []
+
+  // Out
+  var makeRefreshUseCase: (() -> RefreshTeamsUseCase)!
+  let queue = OperationQueue()
 
   override func viewDidLoad() {
     super.viewDidLoad()
     assert(observable != nil)
+    assert(makeRefreshUseCase != nil)
     tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+
+    refreshControl?.addTarget(self, action: #selector(TeamListViewController.refresh), for: .valueChanged)
   }
 
   override func viewWillAppear(_ animated: Bool) {
@@ -26,6 +35,7 @@ class TeamListViewController: UITableViewController {
     observableDisposable = observable.subscribe(onNext: { teams in
       self.teams = teams
       self.tableView.reloadData()
+      self.refreshControl?.endRefreshing()
     })
   }
 
@@ -42,5 +52,10 @@ class TeamListViewController: UITableViewController {
     let cell = tableView.dequeueReusableCell(withIdentifier: "cell")!
     cell.textLabel?.text = teams[indexPath.row].displayName
     return cell
+  }
+
+  func refresh() {
+    let useCase = makeRefreshUseCase()
+    useCase.schedule(on: queue)
   }
 }
